@@ -14,8 +14,18 @@ function Bars(){
 function Values(){
     var val = [];
     for  (var i = 0; i < 20; i++){
-        val.push(Math.random() * 100);
+        val.push(Math.floor((Math.random() * 100) + 1));
     }
+
+    return(
+        <div>
+            {val.map((val, i) => (
+                <div key={`some-value-${i}`}>
+                    <div className = "size">{val}</div>
+                </div>
+            ))}
+        </div>
+    );
 }
 
 //Can use for video background
@@ -23,4 +33,4 @@ function Values(){
                 <source src={video} type='video/mp4'/>
             </video>
 */
-export default Bars
+export default Values

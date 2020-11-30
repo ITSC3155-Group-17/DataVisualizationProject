@@ -1,0 +1,14 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./media/tech-background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bars{
+    Position: absolute;
+    left: 25%;
+    top: 20%;
+}

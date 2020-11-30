@@ -5,12 +5,11 @@ import  './index.css'
 
 function Greeting(){
   return (
-  <div className="page">
-      <Bars/>
-  </div>
+    <div className ="page">
+      <div className = "header"></div>
+      <div className = "bars"><Bars/></div>
+    </div>
   );
 }
-
-export default Greeting;
 
 ReactDom.render(<Greeting/>, document.getElementById('root'));

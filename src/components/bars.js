@@ -7,16 +7,16 @@ export default class Bars extends React.Component{
     //From https://reactjs.org/docs/react-component.html#constructor
     constructor(props){
         super(props);
+
         //Creates an array state that is empty
         //from https://www.robinwieruch.de/react-state-array-add-update-remove
         this.state = {val: []};
     }
     
     //Cannont modify the array state within render
-
     render() {
         return(
-        <div>
+        <div className = "container">
             {this.state.val.map((val, i) => (
                 <div className = "size" 
                 key={`some-value-${i}`}
@@ -32,7 +32,7 @@ export default class Bars extends React.Component{
         this.randomizeArray();
     }
 
-    //Sets random values for the array val and updates the 
+    //Sets random values for the array state val and updates the 
     randomizeArray(){
         var val = [];
         

@@ -1,9 +1,15 @@
-
+.container{
+  display: flex;
+  width: 900px;
+  height: 820px;
+}
 .size{
-    width: 25px;
-    margin-left: 20px;
-    text-align: center;
-    display: inline-block;
-    vertical-align: bottom;
-    background-color: #3d9970;
+  
+  width: 25px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  display: inline-block;
+  vertical-align: bottom;
+  background-color: #3d9970;
 }

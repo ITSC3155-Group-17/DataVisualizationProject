@@ -6,12 +6,11 @@ import  './index.css'
 function Greeting(){
   return (
   <div className="page">
-    <section>
-      <Bars />
-    </section>
+      <Bars/>
   </div>
   );
 }
 
+export default Greeting;
 
 ReactDom.render(<Greeting/>, document.getElementById('root'));

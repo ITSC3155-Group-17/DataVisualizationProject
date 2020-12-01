@@ -16,7 +16,8 @@ export default class Bars extends React.Component{
     }
 
     bubble = () =>{
-        var values = bubbleSort(this.state.val);
+        const values = bubbleSort(this.state.val);
+        this.setState({values});
     }
     
     //Cannont modify the array state within render
@@ -31,23 +32,23 @@ export default class Bars extends React.Component{
                 </div>
             ))}
         <div>
-                <button type="button" onClick={this.bubbleSort}>
-                    bubble sort
+                <button type="button" onClick={this.bubble}>
+                    Bubble Sort
                 </button>
             </div>
             <div>
                 <button type="button" onClick={this.quickSort}>
-                    quick sort
+                    Quick Sort
                 </button>
             </div>
             <div>
                 <button type="button" onClick={this.mergeSort}>
-                    merge sort
+                    Merge Sort
                 </button>
             </div>
             <div>
                 <button type="button" onClick={this.randomizeArray}>
-                    randomize
+                    Randomize
                 </button>
             </div>
         </div>

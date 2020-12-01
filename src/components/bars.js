@@ -12,9 +12,10 @@ export default class Bars extends React.Component{
         //Creates an array state that is empty
         //from https://www.robinwieruch.de/react-state-array-add-update-remove
         this.state = {val: []};
+        
     }
 
-    bubble(){
+    bubble = () =>{
         var values = bubbleSort(this.state.val);
     }
     
@@ -58,7 +59,7 @@ export default class Bars extends React.Component{
     }
 
     //Sets random values for the array state val and updates the 
-    randomizeArray(){
+    randomizeArray = () => {
         var val = [];
         
         //20 values in an array that are between 1 and 100

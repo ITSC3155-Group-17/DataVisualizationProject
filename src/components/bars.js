@@ -1,5 +1,6 @@
 import React from 'react';
 import './bars.css';
+import {bubbleSort} from './sort.js';
 
 //From https://reactjs.org/docs/react-component.html#constructor
 export default class Bars extends React.Component{
@@ -11,6 +12,10 @@ export default class Bars extends React.Component{
         //Creates an array state that is empty
         //from https://www.robinwieruch.de/react-state-array-add-update-remove
         this.state = {val: []};
+    }
+
+    bubble(){
+        var values = bubbleSort(this.state.val);
     }
     
     //Cannont modify the array state within render
@@ -24,6 +29,26 @@ export default class Bars extends React.Component{
                     {val}
                 </div>
             ))}
+        <div>
+                <button type="button" onClick={this.bubbleSort}>
+                    bubble sort
+                </button>
+            </div>
+            <div>
+                <button type="button" onClick={this.quickSort}>
+                    quick sort
+                </button>
+            </div>
+            <div>
+                <button type="button" onClick={this.mergeSort}>
+                    merge sort
+                </button>
+            </div>
+            <div>
+                <button type="button" onClick={this.randomizeArray}>
+                    randomize
+                </button>
+            </div>
         </div>
     );
 }

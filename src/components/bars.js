@@ -1,6 +1,8 @@
 import React from 'react';
 import './bars.css';
 import {bubbleSort} from './sort.js';
+import {quickSort} from './sort.js';
+import {selectionSort} from './sort.js'
 
 //From https://reactjs.org/docs/react-component.html#constructor
 export default class Bars extends React.Component{
@@ -17,6 +19,16 @@ export default class Bars extends React.Component{
 
     bubble = () =>{
         const values = bubbleSort(this.state.val);
+        this.setState({values});
+    }
+
+    quick = () =>{
+        const values = quickSort(this.state.val);
+        this.setState({vals:values});
+    }
+
+    selection = () =>{
+        const values = selectionSort(this.state.val);
         this.setState({values});
     }
     
@@ -37,13 +49,13 @@ export default class Bars extends React.Component{
                 </button>
             </div>
             <div>
-                <button type="button" onClick={this.quickSort}>
+                <button type="button" onClick={this.quick}>
                     Quick Sort
                 </button>
             </div>
             <div>
-                <button type="button" onClick={this.mergeSort}>
-                    Merge Sort
+                <button type="button" onClick={this.selection}>
+                    Selection Sort
                 </button>
             </div>
             <div>

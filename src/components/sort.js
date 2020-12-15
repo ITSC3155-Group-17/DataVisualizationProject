@@ -1,3 +1,5 @@
+
+
 export function bubbleSort(array){
     for (let i = 0; i < array.length; i++) {
         for (let j = 0; j < array.length; j++) {
@@ -29,6 +31,19 @@ export function quickSort(array, length = array.length-1, start=0){
     }
             // calling quick sort recursively
     return [...quickSort(left), pivot, ...quickSort(right)];
+}
+
+export function insertionSort(array){
+    for (let i = 1; i < array.length; i++) {
+        let key = array[i];
+        let j = i - 1;
+        while (j >= 0 && array[j] > key) {
+            array[j + 1] = array[j];
+            j = j - 1;
+        }
+        array[j + 1] = key;
+    }
+    return array;
 }
 
 export function selectionSort(array){

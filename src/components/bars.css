@@ -1,15 +1,20 @@
 .container{
-  display: flex;
-  width: 900px;
-  height: 820px;
+  margin: 0 auto;
+  display: relative;
 }
 .size{
-  
-  width: 50px;
+  width: 12px;
   margin-left: 5px;
   margin-right: 5px;
   text-align: center;
+  font-size: 11px;
   display: inline-block;
   vertical-align: bottom;
   background-color: #3d9970;
+}
+
+.buttons{
+  position: absolute;
+  top: 35px;
+  margin-left: 100px;
 }
